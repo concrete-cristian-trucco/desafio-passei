@@ -12,12 +12,12 @@ docker-compose ps
 echo
 echo
 
-echo "Inserindo massa de teste"
+#echo "Inserindo massa de teste"
 
-curl -X POST http://localhost/notes --data {"Text":"Desafio"}
+#curl -X POST http://localhost/notes --data {"Text":"Desafio"}
 echo
-curl -X POST http://localhost/notes --data {"Text":"Passei"}
+#curl -X POST http://localhost/notes --data {"Text":"Passei"}
 echo
-curl -X POST http://localhost/notes --data {"Text":"Direto"}
+#curl -X POST http://localhost/notes --data {"Text":"Direto"}
 echo
 
