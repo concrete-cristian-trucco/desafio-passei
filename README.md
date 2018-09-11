@@ -1,6 +1,6 @@
 # Desafio
 
- - **Obs**: Branch develop estou testando a imagem Alpine (73mb), está funcionando e subindo o projeto mais rápido. Funcionado!!!
+ - **Obs**: Branch develop estou testando a imagem Alpine (73mb), está funcionando e subindo o projeto mais rápido. Funcionando!!!
   
 - Para iniciar os containers Docker rode o script (./init.sh) que está na raiz do repositório.
 ```
