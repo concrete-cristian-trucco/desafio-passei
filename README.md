@@ -23,7 +23,7 @@
 - Caso não tenha Docker na máquina rode no Play With Docker
   * http://play-with-docker.com/
 
-- Apóes estar logado e com o terminal iniciado no PWD faça:
+- Após estar logado e com o terminal iniciado no PWD faça:
   ```
   git clone https://github.com/concrete-cristian-trucco/desafio-passei.git
   cd desafio-passei/
