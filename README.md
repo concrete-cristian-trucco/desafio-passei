@@ -26,3 +26,8 @@
   ./init.sh
   ```
   
+  ### Removendo os containers
+- Para remover os containers e limpar o ambiente use o script destroy.sh
+  ```
+     ./destroy.sh
+```  
