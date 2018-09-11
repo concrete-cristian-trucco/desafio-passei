@@ -1,8 +1,9 @@
 # Desafio
+
 - Para iniciar os containers Docker rode o script (./init.sh) que está na raiz do repositório.
 * O script init.sh irá subir o docker-compose com os 3 container (nginx,application e mysql) e após isso irá rodar o script sql no container Mysql, para criar a tabela Notes no banco de dados.
   
-- Para testar Api
+- Para testar a Api Node.
 ```
     http://localhost/notes
 ```
@@ -26,8 +27,8 @@
   ./init.sh
   ```
   
-  ### Removendo os containers
+### Removendo os containers
 - Para remover os containers e limpar o ambiente use o script destroy.sh
   ```
-     ./destroy.sh
-```  
+  ./destroy.sh
+  ```  
