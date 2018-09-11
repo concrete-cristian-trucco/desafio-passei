@@ -14,10 +14,11 @@ echo
 
 #echo "Inserindo massa de teste"
 
-#curl -X POST http://localhost/notes --data {"Text":"Desafio"}
-echo
-#curl -X POST http://localhost/notes --data {"Text":"Passei"}
-echo
-#curl -X POST http://localhost/notes --data {"Text":"Direto"}
-echo
+curl -X POST http://localhost/notes --data {"Text":"Desafio"}
+echo " :Teste Inserido"
+curl -X POST http://localhost/notes --data {"Text":"Passei"}
+echo " :Teste Inserido"
+curl -X POST http://localhost/notes --data {"Text":"Direto"}
+echo " :Teste Inserido"
+
 
