@@ -1,0 +1,54 @@
+version:  '3'
+
+services: 
+  nginx:
+    container_name: nginx
+    build: ./nginx
+    networks:
+       -  desafio-passei-direto
+    ports:  
+    - 80:80
+    depends_on:
+        - application
+    links:  
+     - application
+    restart: always
+
+  mysql:
+    #image: mysql
+    build: ./mysql
+    container_name: mysql
+    #command: mysql -u root -p root -h localhost notes database_schema.sql /dev/null
+    command: mysqld --user=root
+    volumes:
+      - db_data:/var/lib/mysq
+      - ./mysql-dump:/docker-entrypoint-initdb.d
+    environment:
+      - MYSQL_DATABASE=notes
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_USER=root
+      - MYSQL_USER=notes-api
+      - MYSQL_PASSWORD=notes-api
+    
+    networks:
+       -  desafio-passei-direto
+    ports:
+      - 3306:3306
+    restart: on-failure
+
+  application:
+    build: ./application
+    container_name: application
+
+    ports:
+      - 8080:8080
+    networks:
+       -  desafio-passei-direto  
+    restart: on-failure
+    depends_on:
+        - mysql
+volumes:
+    db_data:
+
+networks:
+  desafio-passei-direto:
