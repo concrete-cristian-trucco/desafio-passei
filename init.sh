@@ -1,8 +1,13 @@
 #!/bin/bash
 PASSWORD='root'
+
+echo "buildando as imagens que seram usadas nos containers"
+docker-compose build
+
+echo "Subindo o Docker Compose"
 docker-compose up -d
 
-## comando para criar o banco e a tabela que será usada pela aplicação
+## comando  Docker para criar o banco e a tabela que será usada pela aplicação Node.
 
 docker exec -i mysql mysql -u root -p${PASSWORD} -h localhost notes < database_schema.sql 2> /dev/null
 
