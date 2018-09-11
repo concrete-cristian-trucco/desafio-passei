@@ -15,7 +15,9 @@ echo "Listando Containers criados"
 
 docker-compose ps
 echo
-echo
+echo "Gerenciando Aplicativos"
+docker exec -i application pm2 start server.js
+echo 
 
 echo "sleep 10 segundos para subir o banco"
 sleep 10

@@ -1,5 +1,5 @@
 FROM node:10.10.0-alpine
-
+USER node
 ARG NODE=production
 ENV NODE_ENV=${NODE}
 ENV NODEJS_API_PORT=8080
