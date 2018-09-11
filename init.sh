@@ -9,10 +9,15 @@ docker exec -i mysql mysql -u root -p${PASSWORD} -h localhost notes < database_s
 echo "Listando Containers criados"
 
 docker-compose ps
+echo
+echo
 
 echo "Inserindo massa de teste"
 
 curl -X POST http://localhost/notes --data {"Text":"Desafio"}
+echo
 curl -X POST http://localhost/notes --data {"Text":"Passei"}
+echo
 curl -X POST http://localhost/notes --data {"Text":"Direto"}
+echo
 
