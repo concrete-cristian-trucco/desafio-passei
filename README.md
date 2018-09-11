@@ -1,7 +1,6 @@
-# desafio
-- Para start do serviços ./init.sh
-* script init.sh irá subir o docker-compose com os 3 container (nginx,application e mysql)
-* e após isso irá rodar o script sql no container Mysql, para criar a tabela Notes no banco de dados.
+# Desafio
+- Para start os Containers rode o script (./init.sh) que está na raiz do repositório.
+* O script init.sh irá subir o docker-compose com os 3 container (nginx,application e mysql) e após isso irá rodar o script sql no container Mysql, para criar a tabela Notes no banco de dados.
   
 - Para testar Api
 ```
@@ -15,3 +14,15 @@
 ```
      curl -X DELETE http://localhost/notes/1
 ```
+
+### Usando o PWD
+- Caso não tenha Docker na máquina rode no Play With Docker
+  * http://play-with-docker.com/
+
+- Apóes estar logado e com o terminal iniciado no PWD faça:
+  ```
+  git clone https://github.com/concrete-cristian-trucco/desafio-passei.git
+  cd desafio-passei/
+  ./init.sh
+  ```
+  
