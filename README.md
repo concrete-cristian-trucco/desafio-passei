@@ -37,3 +37,24 @@
   ```
   ./destroy.sh
   ```  
+
+### Bonus Docker Swarm
+- O arquivo (docker-compose-swarm.yml) já está preparado para rodar em um cluster Swarm.
+- **Obs**: Necessário ter um cluster Swarm iniciado para que o comando abaixo (stack deploy) funcione.
+- **Dica** Utilize o PWD para rodar esse cenário. Basta clicar no icone da ferramenta que ele abre a opção de criar um cluster boostrap com 3 Managers e 2 Workes.
+
+* Após isso rode os comandos na sequência:
+  
+```
+  git clone https://github.com/concrete-cristian-trucco/desafio-passei.git
+  cd desafio-passei/
+  ### Lembrando que esse passo está na branch develop
+  git checkout develop
+
+  docker stack deploy -c docker-compose-swarm.yml desafio
+```
+
+- Listando o serviços criados no cluster 
+  ```
+  docker service ls
+  ```
