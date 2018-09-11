@@ -18,7 +18,7 @@ echo
 echo "Gerenciando Aplicativos"
 docker exec -i application pm2 start server.js
 echo 
-
+echo
 echo "sleep 10 segundos para subir o banco"
 sleep 10
 #echo "Inserindo massa de teste"
