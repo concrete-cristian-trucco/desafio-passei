@@ -1,5 +1,5 @@
 # Desafio
-- Para start os Containers rode o script (./init.sh) que está na raiz do repositório.
+- Para iniciar os containers Docker rode o script (./init.sh) que está na raiz do repositório.
 * O script init.sh irá subir o docker-compose com os 3 container (nginx,application e mysql) e após isso irá rodar o script sql no container Mysql, para criar a tabela Notes no banco de dados.
   
 - Para testar Api
