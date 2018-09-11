@@ -17,6 +17,8 @@ docker-compose ps
 echo
 echo
 
+echo "sleep 10 segundos para subir o banco"
+sleep 10
 #echo "Inserindo massa de teste"
 
 curl -X POST http://localhost/notes --data {"Text":"Desafio"}
