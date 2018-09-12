@@ -61,15 +61,16 @@ resource "docker_container" "mysql" {
 #    destination = "/data"
 #  }
 
-provisioner "remote-exec" {
-             connection {
-                 user = "root"
-                 password = "root"
-             }
-        inline = [
-           "mysql -u root -p root -h localhost notes < database_schema.sql 2> /dev/null"
-        ]
-    }
+#provisioner "remote-exec" {
+#             connection {
+#                 type     = "ssh"
+ #                user = "root"
+ #                password = "root"
+  #           }
+  #      inline = [
+  #         "mysql -u root -p root -h localhost notes < database_schema.sql 2> /dev/null"
+  #      ]
+   # }
 }
 resource "docker_image" "mysql" {
   name = "concretecristiantrucco/desafio_mysql:1.0"
