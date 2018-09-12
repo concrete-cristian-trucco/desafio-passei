@@ -19,6 +19,7 @@ resource "docker_container" "application" {
   networks = [  "${docker_network.private_network.name}" ]
   restart = "on-failure"
   links = ["mysql"]
+  depends_on = ["docker_container.mysql"]
 }
 
 resource "docker_image" "application" {
