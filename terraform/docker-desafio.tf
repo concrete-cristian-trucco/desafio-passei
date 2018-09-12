@@ -36,6 +36,8 @@ resource "docker_container" "nginx" {
   networks = [  "${docker_network.private_network.name}" ]
   restart = "always"
   links = ["application"]
+  depends_on = ["docker_container.application"]
+
 }
 resource "docker_image" "nginx" {
   name = "concretecristiantrucco/desafio_nginx:1.0"

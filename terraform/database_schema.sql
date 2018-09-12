@@ -1,4 +1,3 @@
-CREATE DATABASE 'notes'
 
 USE notes;
 CREATE TABLE `notes`.`Note` (
