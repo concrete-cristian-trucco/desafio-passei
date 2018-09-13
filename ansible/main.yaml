@@ -1,0 +1,49 @@
+
+---
+- name: nginx container
+  docker:
+    name: nginx
+    image: concretecristiantrucco/desafio_nginx:1.0
+    #command: redis-server --appendonly yes
+    state: started
+    ports:
+    - "80:80"
+    links:  
+     - application
+    restart: always
+  #  volumes_from:
+  #  - mydata
+---
+- name: mysql container
+  docker:
+    name: mysql
+    image: concretecristiantrucco/desafio_mysql:1.0
+    #command: redis-server --appendonly yes
+    state: started
+    ports:
+    - "3306:3306"
+    command: mysqld --user=root
+    volumes:
+      - db_data:/var/lib/mysq
+      - ./mysql-dump:/docker-entrypoint-initdb.d
+    env:
+      MYSQL_DATABASE: notes
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_USER: root
+      MYSQL_USER: notes-api
+      MYSQL_PASSWORD: notes-api
+    
+  #  volumes_from:
+  #  - mydata
+
+---
+- name: application container
+  docker:
+    name: application
+    image: concretecristiantrucco/application:1.0
+    state: started
+    ports:
+    - "8080:8080"
+    links:  
+     - application
+    restart: always
