@@ -8,17 +8,17 @@
  ```  
 * O script init.sh irá subir o docker-compose com os 3 container (nginx,application e mysql) e após isso irá rodar o script sql no container Mysql, para criar a tabela Notes no banco de dados.
   
-- Para testar a Api Node.
-```
-    http://localhost/notes
-```
-- Para test POST: 
+- Para test POST usando a Api: 
  ```
      curl -X POST http://localhost/notes --data {"Text":"test"}
  ```   
 - Para test DELETE:
 ```
      curl -X DELETE http://localhost/notes/1
+```
+- Para testar a Api Node.
+```
+    http://localhost/notes
 ```
 
 ### Usando o PWD
@@ -58,3 +58,6 @@
   ```
   docker service ls
   ```
+  
+  - Docker Hub das Imagens criadas.
+  - https://hub.docker.com/u/concretecristiantrucco/
