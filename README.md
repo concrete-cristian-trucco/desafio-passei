@@ -1,15 +1,16 @@
-# Desafio Passei Direto - DevOps
 ---
-titulo: Desafio
-descrição: Desafio passei direto criar uma infraestrutura para Docker com os 3 container (nginx,application e mysql)
+titulo: Desafio Passei Direto - DevOps
+descrição: Criar uma infraestrutura usando containers Docker com os 3 container (nginx,application e mysql)
 autor: Cristian Trucco
 autor: cristian-trucco
 data: 10/09/2018
 ---
 
 ---
-Obs: Branch develop tem outros cenários.
+### Obs: Branch develop tem outros cenários utilizando outros orquestradores.
 ---
+
+### Usando Docker Compose.
 
 - Para iniciar os containers Docker rode o script (./init.sh) que está na raiz do repositório.
 ```
