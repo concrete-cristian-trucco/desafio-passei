@@ -8,7 +8,7 @@ spec:
   template:
     metadata:
       labels:
-       name: nginx
+       name: nginx-deployment
     spec:
       containers:
         - name: nginx
@@ -25,7 +25,7 @@ spec:
   template:
     metadata:
       labels:
-       name: application
+       name: application-deployment
     spec:
       containers:
         - name: application
@@ -42,7 +42,7 @@ spec:
   template:
     metadata:
       labels:
-       name: mysql
+       name: mysql-deployment
     spec:
       containers:
         - name:  mysql

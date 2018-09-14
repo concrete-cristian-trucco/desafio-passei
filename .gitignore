@@ -8,3 +8,5 @@ bin/
 coverage.html
 cover.out
 util/
+terraform.tfstate*
+.terraform/

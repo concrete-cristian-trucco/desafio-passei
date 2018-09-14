@@ -35,9 +35,9 @@ resource "docker_container" "nginx" {
     external = 80
   }
   networks = [  "${docker_network.private_network.name}" ]
+  depends_on = ["docker_container.application"]
   restart = "always"
   links = ["application"]
-  depends_on = ["docker_container.application"]
 
 }
 resource "docker_image" "nginx" {

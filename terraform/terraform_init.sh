@@ -1,7 +1,11 @@
 #!/bin/bash
 
 PASSWORD='root'
-echo "Subindo o Docker "
+echo "Subindo o Docker com Terraform "
+
+echo "Terraform Plan"
+terraform plan
+echo "Terraform Apply Force"
 terraform apply -auto-approve  
 
 ## comando  Docker para criar o banco e a tabela que será usada pela aplicação Node.

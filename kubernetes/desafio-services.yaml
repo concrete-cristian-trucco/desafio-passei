@@ -8,10 +8,11 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
+      nodePort: 31080
   selector:
     name: nginx-deployment
-    app: application-deployment
-    tier: frontend
+    #app: application-deployment
+    #tier: frontend
 ---
 apiVersion: v1
 kind: Service
@@ -40,5 +41,5 @@ spec:
       targetPort: 3306
   selector:
     name: mysql-deployment
-    app: application-deployment
-    tier: mysql
+    #app: application-deployment
+    #tier: mysql
